@@ -8,7 +8,7 @@
               <i class="nc-icon nc-ambulance text-warning"></i>
             </div>
             <div slot="content">
-              <p class="card-category">Alunos</p>
+              <p class="card-category">Qtd. Alunos</p>
               <h4 class="card-title"> X</h4>
             </div>
             <div slot="footer">
@@ -23,7 +23,7 @@
               <i class="nc-icon nc-money-coins text-success"></i>
             </div>
             <div slot="content">
-              <p class="card-category">Vendas</p>
+              <p class="card-category">Qtd. Professores</p>
               <h4 class="card-title">R$0,00</h4>
             </div>
             <div slot="footer">
