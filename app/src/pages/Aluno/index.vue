@@ -8,8 +8,15 @@
           >
             <template slot="header">
               <h4 class="card-title">Lista de Aluno</h4>
-              <p class="card-category">Alunos Cadastrados</p>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><router-link to="/">Home</router-link> </li>
+                  <li class="breadcrumb-item active" aria-current="page">Lista de Alunos</li>
+                </ol>
+              </nav>  
+            
             </template>
+            
             <router-link to="/admin/create-aluno" class="btn btn-info btn-fill float-left"> Cadastrar Aluno</router-link>
             <l-table class="table-hover table-striped"
                      :columns="table1.columns"
@@ -28,20 +35,13 @@
 <script>
   import LTable from 'src/components/Table.vue'
   import Card from 'src/components/Cards/Card.vue'
-  const tableColumns = ['Id', 'Nome', 'Contato', 'Email', 'Ação']
+  const tableColumns = ['Id', 'Matricula', 'Nome', 'Turma', 'Ações']
   const tableData = [{
     id: 1,
-    nome: 'Dakota Rice',
-    contato: '$36.738',
-    email: 'Niger',
-    acao: 'Oud-Turnhout'
-  },
-  {
-    id: 2,
-    nome: 'Minerva Hooper',
-    contato: '$23,789',
-    email: 'Curaçao',
-    acao: 'Sinaai-Waas'
+    matricula: '0123456',
+    nome: 'Rice',
+    turma: 'G5',
+    ações: 'Exibir | Edit | Excluir',
   }]
   export default {
     components: {
@@ -51,10 +51,6 @@
     data () {
       return {
         table1: {
-          columns: [...tableColumns],
-          data: [...tableData]
-        },
-        table2: {
           columns: [...tableColumns],
           data: [...tableData]
         }

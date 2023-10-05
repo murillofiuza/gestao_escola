@@ -1,6 +1,14 @@
 <template>
   <card>
-    <h4 slot="header" class="card-title">Cadastrar Aluno</h4>
+    <h4 slot="header" class="card-title">Formulário de Cadastro de Aluno</h4>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><router-link to="/">Home</router-link> </li>
+        <li class="breadcrumb-item"><router-link to="/admin/aluno">Lista de Alunos</router-link></li>
+        <li class="breadcrumb-item active" aria-current="page">Cadastrar Aluno</li>
+      </ol>
+    </nav>  
+              
     <form>
       <div class="row">
         <div class="col-md-4">
@@ -18,6 +26,15 @@
                     v-model="CreateAluno.cpf">
           </base-input>
         </div>
+
+        <div class="col-md-2">
+          <base-input type="rg"
+                    label="RG"
+                    placeholder="Digite o  RG"
+                    v-model="CreateAluno.rg">
+          </base-input>
+        </div>
+
 
         <div class="col-md-4">
           <base-input type="email"
@@ -129,6 +146,7 @@
         CreateAluno: {
           nome: '',
           cpf: '',
+          rg: '',
           email: '',
           dt_nascimento: '',
           telefone: '',
