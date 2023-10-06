@@ -13,7 +13,7 @@ class AlunoController extends Controller
      */
     public function index()
     {
-        return Aluno
+        //s
     }
 
     /**
